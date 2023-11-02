@@ -4,6 +4,11 @@
     {
         static void Main(string[] args)
         {
+          //  CustomList<string> myList = new CustomList<string>();
+
+          //  Console.WriteLine(myList.Count);
+          //  Console.WriteLine(myList.Capacity);
+          //  Console.WriteLine(myList[2]);
 
         }
     }
