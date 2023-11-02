@@ -11,13 +11,13 @@ namespace CustomListTests
         {
             //Arrange
             CustomList<string> myList = new CustomList<string>();
-
+           
             //Act
             myList.Add("hello");
             myList.Add("world");
 
             //Assert
-            Assert.AreEqual(1, CustomList.count);
+            Assert.AreEqual(2, myList.count);
         }
 
         [TestMethod]
@@ -32,7 +32,7 @@ namespace CustomListTests
             myList.Add("Hello");
 
             //Assert
-            Assert.AreEqual("Hello", myList[0]);
+            Assert.AreEqual("Hello", myList.items[0]);
         }              
 
         [TestMethod]
@@ -46,7 +46,7 @@ namespace CustomListTests
             myList.Add("world");
 
             //Assert
-            Assert.AreEqual("world", myList[1]);
+            Assert.AreEqual("world", myList.items[1]);
         }
 
         [TestMethod]
@@ -64,10 +64,11 @@ namespace CustomListTests
             myList.Add("jumped");
             myList.Add("over");
             myList.Add("the");
-            myList.Add("lazy");
-            myList.Add("dog");
+            myList.Add("lazydog");
+           
+            
             //Assert
-            Assert.AreEqual(9, CustomList.capacity);
+            Assert.AreEqual(9, myList.capacity);
         }
 
         [TestMethod]
@@ -85,10 +86,10 @@ namespace CustomListTests
             myList.Add("jumped");
             myList.Add("over");
             myList.Add("the");
-            myList.Add("lazy");
-            myList.Add("dog");
+            myList.Add("lazydog");
+      
             //Assert
-            Assert.AreEqual("brown", myList[2]);
+            Assert.AreEqual("brown", myList.items[2]);
         }
     }
 }

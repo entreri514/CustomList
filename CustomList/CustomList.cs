@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,9 +10,10 @@ namespace CustomList
     public class CustomList<T>
     {
         //Member Variables (HAS A)
-        private T[] items;
-        private int capacity;
-        private int count;
+        public T[] items;
+        public int capacity;
+        public int count;
+        public T[] temp;
 
         //Constructor
         public CustomList()
@@ -27,8 +29,30 @@ namespace CustomList
             //'item' parameter should be added to internal 'items' array
             //if items array is at capacity, double capacity and create new array
             //transfer all items to new array
+            items[count] = item;
+            count++;
+            if (count == capacity)
+            {
+                temp = new T[capacity];
+                for (int i = 0; i < capacity; i++)
+                {
+                    temp[i] = items[i];
+                }
+                capacity = capacity + 5;
+                items = new T[capacity];
+                for (int i = 0; i < capacity; i++)
+                {
+                    items[i] = temp[i];
+                }
+            }
+            
+        
+        
+        
+        
+        
+        
         }
-
         public bool Remove(T item)
         {
             //If 'item' exists in the 'items' array, remove its first instance
