@@ -15,6 +15,7 @@ namespace CustomList
         public int count;
         public T[] temp;
 
+        
         //Constructor
         public CustomList()
         {
@@ -43,18 +44,13 @@ namespace CustomList
                 for (int i = 0; i < capacity; i++)
                 {
                     items[i] = temp[i];
+                    
                 }
-            }
-            
-        
-        
-        
-        
-        
-        
+            }        
         }
         public bool Remove(T item)
         {
+            count--;
             //If 'item' exists in the 'items' array, remove its first instance
             //Any items coming after the removed item should be shifted down so there is no empty index.
             //If 'item' was removed, return true. If no item was removed, return false.
