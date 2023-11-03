@@ -33,7 +33,7 @@ namespace CustomList
             count++;
             if (count == capacity)
             {
-                temp = new T[capacity];
+                temp = new T[capacity + 5];
                 for (int i = 0; i < capacity; i++)
                 {
                     temp[i] = items[i];

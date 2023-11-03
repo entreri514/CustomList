@@ -65,7 +65,6 @@ namespace CustomListTests
             myList.Add("over");
             myList.Add("the");
             myList.Add("lazydog");
-           
             
             //Assert
             Assert.AreEqual(9, myList.capacity);
