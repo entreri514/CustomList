@@ -74,8 +74,13 @@ namespace CustomList
 
         public override string ToString()
         {
+            string myString="";
+            for (int i=0;i<count;i++)
+            {
+                myString = myString + items[i];
+            }
             //returns a single string that contains all items from array
-            return "";
+            return myString;
         }
 
         public static CustomList<T> operator +(CustomList<T> firstList, CustomList<T> secondList)

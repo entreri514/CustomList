@@ -1,12 +1,35 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CustomList;
 
 namespace CustomListTests
 {
-    internal class Class1
+    [TestClass]
+    public class ToStringTests
     {
+        [TestMethod]
+
+        public void ToStringMethod_ListOfStrings_ReturnsListOfStrings()
+        {
+            //Arrange
+            CustomList<string> myList = new CustomList<string>();
+            
+            //Act
+            myList.Add("the");            
+            myList.Add("quick");
+            myList.Add("brown");
+            myList.Add("fox");
+            
+            myList.ToString();
+            
+            //Assert
+            Assert.AreEqual(myList, "thequickbrownfox");
+
+        }
+
+
+
+
+
+
+
     }
 }

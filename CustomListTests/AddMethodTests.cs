@@ -64,7 +64,7 @@ namespace CustomListTests
             myList.Add("jumped");
             myList.Add("over");
             myList.Add("the");
-            myList.Add("lazydog");
+            myList.Add("dog");
             
             //Assert
             Assert.AreEqual(9, myList.capacity);
@@ -85,7 +85,7 @@ namespace CustomListTests
             myList.Add("jumped");
             myList.Add("over");
             myList.Add("the");
-            myList.Add("lazydog");
+            myList.Add("dog");
       
             //Assert
             Assert.AreEqual("brown", myList.items[2]);
