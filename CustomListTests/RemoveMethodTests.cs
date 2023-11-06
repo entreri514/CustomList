@@ -31,8 +31,8 @@ namespace CustomListTests
             //Act
             myList.Add("hello");
             myList.Add("world");
-            myList.Remove("hello");
             bool didRemove = myList.Remove("hello");
+          
 
             //Assert
             Assert.IsTrue(didRemove);
@@ -84,9 +84,10 @@ namespace CustomListTests
             myList.Add("hello");
             myList.Add("world");
             myList.Add("hello");
+            myList.Remove("hello");
 
             //Assert
-            Assert.AreEqual("hello", myList.items[1]);
+            Assert.AreEqual("world", myList.items[0]);
 
         }
     

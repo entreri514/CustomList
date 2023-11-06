@@ -50,7 +50,22 @@ namespace CustomList
         }
         public bool Remove(T item)
         {
-            count--;
+            if (items.Contains(item))
+            {                
+                
+                
+                temp = new T[capacity];
+                for (int i=0;i<count;i++)
+                {
+                    temp[i] = items[i+1];
+                }
+                for (int i=0;i<count;i++)
+                {
+                    items[i] = temp[i]; 
+                }
+                count--;
+                return true;
+            }
             //If 'item' exists in the 'items' array, remove its first instance
             //Any items coming after the removed item should be shifted down so there is no empty index.
             //If 'item' was removed, return true. If no item was removed, return false.
