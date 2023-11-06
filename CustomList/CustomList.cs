@@ -77,7 +77,7 @@ namespace CustomList
             string myString="";
             for (int i=0;i<count;i++)
             {
-                myString = myString + items[i];
+                myString = myString + "," + items[i];
             }
             //returns a single string that contains all items from array
             return myString;
